@@ -1,0 +1,15 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+               xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+  <soap:Body>
+    <FindItem xmlns="http://schemas.microsoft.com/exchange/services/2006/messages"
+               xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"
+              Traversal="Shallow">
+      <ItemShape>
+        <t:BaseShape>IdOnly</t:BaseShape>
+      </ItemShape>
+      <ParentFolderIds>
+        <t:DistinguishedFolderId Id="${folder}"/>
+      </ParentFolderIds>
+    </FindItem>
+  </soap:Body>
+</soap:Envelope>
